@@ -3,6 +3,8 @@ import Comments from './Comments';
 
 const Post = ({ title, body, comments, id }) => {
     console.log(id)
+    console.log(title)
+    console.log(comments)
     return <div style={{ textAlign: 'left', marginBottom: '12px' }}>
         <h3>
             {title}

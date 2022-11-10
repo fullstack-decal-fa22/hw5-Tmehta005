@@ -30,11 +30,7 @@ const Feed = () => {
                 )
             }
 
-            <NewPost display={(in_data) => {
-                let tempList = [...data];
-                tempList.push(in_data);
-                setData(tempList);
-            }} />
+            <NewPost display={getPostsData} />
         </div>
     )
 

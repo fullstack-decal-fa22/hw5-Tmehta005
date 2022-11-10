@@ -7,12 +7,11 @@ const Comments = ({ postId, comments: initialComments }) => {
 
     const handleSubmitComment = () => {
         console.log(newComment)
+        console.log(postId)
         // Un-comment the lines below to complete your solution
         // ====================
         axios.post("http://localhost:3002/post/" + postId + "/comment", { newComment }).then((res) => {
-            let tempList = [...comments]
-            tempList.push(newComment);
-            setComments(tempList);
+            setComments(res.data.comments);
             setNewComment('');
         })
     }

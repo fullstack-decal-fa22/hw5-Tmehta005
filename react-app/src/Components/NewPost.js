@@ -17,7 +17,7 @@ const NewPost = (props) => {
         })
 
         // TODO: Posted result is not GOTTEN
-        axios.post("http://localhost:3002/post", { id: id, title: title, body: body }).then((data) => props.display(data.data));
+        axios.post("http://localhost:3002/post", { id: id, title: title, body: body }).then(props.display);
     }
 
     return <div>
