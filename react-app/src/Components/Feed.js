@@ -20,6 +20,7 @@ const Feed = () => {
         getPostsData();
     }, [])
 
+    console.log(data)
     // ====================
 
     return (

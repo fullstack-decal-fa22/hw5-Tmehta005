@@ -4,7 +4,7 @@ import { React, useState } from "react";
 import axios from "axios";
 
 
-const NewPost = (props) => {
+const NewPost = ({display}) => {
     const [id, setId] = useState("");
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
@@ -17,7 +17,7 @@ const NewPost = (props) => {
         })
 
         // TODO: Posted result is not GOTTEN
-        axios.post("http://localhost:3002/post", { id: id, title: title, body: body }).then(props.display);
+        axios.post("http://localhost:3002/post", { id, title, body }).then(display);
     }
 
     return <div>
